@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Hopeful</title>
+</head>
+<body>
+         <header class="bg-[rgba(249,250,252,0.6)] backdrop-blur-[15px] sticky top-0 z-10 shadow-sm">
+            <div class="max-w-[1440px] mx-auto flex justify-between items-center py-3 px-4">
+                  <div class="flex items-center justify-between space-x-16"> 
+                      <div><h1 class="text-2xl font-bold uppercase">hopeful</h1></div>
+                      <div class="items-center hidden space-x-6 md:flex">
+                          <div class="cursor-pointer">Home</div>
+                          <div class="flex items-center justify-center space-x-2 cursor-pointer"><span>Advertise</span><ion-icon name="chevron-down" /></div>
+                          <div class="flex items-center justify-center space-x-2 cursor-pointer"><span>Supports</span><ion-icon name="chevron-down"/></div>
+                          <div class="cursor-pointer">About</div>
+                          <div class="flex items-center justify-center cursor-pointer"><ion-icon name="search"></ion-icon></div>
+                      </div>
+                  </div>
+                  <div class="items-center hidden space-x-6 md:flex">
+                      <div class="flex items-center justify-center space-x-2 cursor-pointer">
+                        <span class="">Login</span>
+                        <ion-icon name="lock-open-outline"/>
+                      </div>
+                      <button class="px-4 py-2 bg-[#A29BFE] rounded-md md:hover:bg-[#aba5ff]">Donate Now</button>
+                  </div>
+                  <div class="md:hidden" id="open-btn">
+                       <button class="flex items-center justify-center text-2xl active:outline-none active:border-none"><ion-icon name="menu-sharp"/></button>
+                  </div>
+                  <div class="fixed flex flex-col space-y-20 top-0 left-0 px-4 py-3 bg-white w-[100%] h-screen z-50 -translate-x-[100%]" id="toggle-menu">
+                    <div class="flex items-center justify-between">
+                        <h1 class="text-2xl font-bold uppercase">hopeful</h1>
+                        <button class="flex items-center justify-center text-2xl active:outline-none active:border-none" id="close-btn"><ion-icon name="close-sharp"/></button>
+                    </div>
+                    <div class="flex flex-col align-center">
+                        <div class="py-3 text-center border-b cursor-pointer">Home</div>
+                        <div class="flex items-center justify-center py-3 space-x-2 border-b cursor-pointer"><span>Advertise</span><ion-icon name="chevron-down" /></div>
+                        <div class="flex items-center justify-center py-3 space-x-2 border-b cursor-pointer"><span>Supports</span><ion-icon name="chevron-down"/></div>
+                        <div class="py-3 text-center border-b cursor-pointer">About</div>
+                        <div class="flex items-center justify-center py-3 cursor-pointer"><ion-icon name="search"></ion-icon></div>
+                    </div>
+                  </div>
+            </div>
+         </header>
+         <section class="bg-[#F9FAFC]">
+            <div class=" max-w-[1440px] mx-auto py-16 grid grid-cols-1 lg:grid-cols-3 min-h-screen justify-items-center items-center  px-4">
+                <form class="order-2 px-4 mt-10 space-y-4 bg-white rounded-md shadow-md sm:px-6 md:mt-0 md:order-1 py-7">
+                       <div class="text-center">
+                        <h1 class="text-lg font-bold md:text-2xl">Donate for the smile of </h1>
+                        <h1 class="text-lg font-bold md:text-2xl">orphans face</h1>
+                       </div>
+                       <div class="flex items-center justify-center space-x-2">
+                           <input type="radio" name="donation" id="radio1" class="accent-[#A29BFE] h-4 w-4">
+                           <label for="radio1" class="text-sm md:text-base">Donate onetime</label>
+                           <input type="radio" name="donation" id="radio2" class="accent-[#A29BFE] h-4 w-4">
+                           <label for="radio2" class="text-sm md:text-base">Every month</label>
+                       </div>
+                       <div class="flex items-center justify-between text-sm md:text-base">
+                         <button type="button" class="p-3 sm:px-4 sm:py-2 border rounded-md focus:border-[#A29BFE] focus:text-[#A29BFE] focus:bg-[#F5F4FF]">$5</button>
+                         <button type="button" class="p-3 sm:px-4 sm:py-2 border rounded-md focus:border-[#A29BFE] focus:text-[#A29BFE] focus:bg-[#F5F4FF]">$20</button>
+                         <button type="button" class="p-3 sm:px-4 sm:py-2 border rounded-md focus:border-[#A29BFE] focus:text-[#A29BFE] focus:bg-[#F5F4FF]">$50</button>
+                         <button type="button" class="p-3 sm:px-4 sm:py-2 border rounded-md focus:border-[#A29BFE] focus:text-[#A29BFE] focus:bg-[#F5F4FF]">$100</button>
+                       </div>
+                       <div class="flex items-center p-2 space-x-1 text-sm border rounded-md md:text-base">
+                         <input type="text" placeholder="Other amount" class="flex-grow p-1 outline-none">
+                         <span>$</span>
+                       </div>
+                       <div class="flex items-center space-x-2 text-sm text-center md:text-base">
+                          <input type="checkbox" id="checkbox1" class="accent-[#A29BFE] h-4 -4">
+                          <label for="checkbox1">Want to join with donation community</label>
+                       </div>
+                       <div class="flex flex-col items-center space-y-1 text-sm md:text-base">
+                          <button type="button" class="px-4 py-2 bg-[#A29BFE] md:hover:bg-[#aba5ff] rounded-md w-full">Donate now</button>
+                          <span class="text-gray-500">OR</span>
+                          <button type="button" class="flex justify-center  items-center space-x-2 px-4 py-2 rounded-md w-full bg-[#F9FAFC] md:hover:bg-[#f2f2f3]">
+                              <img src="./assets/google.svg" alt="" class="w-6 h-6">
+                              <span>Donate with google pay</span>
+                          </button>
+                       </div>
+                </form>
+                <img src="./assets/hero.svg" class="col-span-2 sm:h-[60%] order-1 md:order-2" />
+            </div>
+         </section>
+         <section class="bg-[#F9FAFC]">
+             <div class="max-w-[1440px] mx-auto  px-4">
+                    <div class="pt-6 pb-12">
+                        <h3 class="text-[#A29BFE] text-center">Service we work for</h3>
+                        <h2 class="text-lg text-center">What care we do for your family</h2>
+                    </div>
+                    <div class="relative grid items-center grid-cols-1 gap-10 px-4 py-12 bg-white rounded-md shadow-md sm:grid-cols-2 md:grid-cols-3 justify-items-center">
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                               <img src="./assets/Group.svg" alt="">
+                               <h2 class="text-lg font-bold">Donate Blood</h2>
+                               <p class="text-sm max-w-[60%] text-center">Get your info tests delivered at home collect a sample from the your task.</p>
+                               <button class="flex items-center justify-center space-x-2 text-sm text-blue-600 md:hover:text-blue-500"><span>Learn more</span><ion-icon name="chevron-forward"></ion-icon></button>
+                        </div>
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                            <img src="./assets/Group-1.svg" alt="">
+                            <h2 class="text-lg font-bold">Pledge for cause</h2>
+                            <p class="text-sm max-w-[60%] text-center">Get your info tests delivered at home collect a sample from the your task.</p>
+                            <button class="flex items-center justify-center space-x-2 text-sm text-blue-600 md:hover:text-blue-500"><span>Learn more</span><ion-icon name="chevron-forward"></ion-icon></button>
+                        </div>
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                            <img src="./assets/Group-2.svg" alt="">
+                            <h2 class="text-lg font-bold">Life for a life</h2>
+                            <p class="text-sm max-w-[60%] text-center">Get your info tests delivered at home collect a sample from the your task.</p>
+                            <button class="flex items-center justify-center space-x-2 text-sm text-blue-600 md:hover:text-blue-500"><span>Learn more</span><ion-icon name="chevron-forward"></ion-icon></button>
+                        </div>
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                            <img src="./assets/Group-3.svg" alt="">
+                            <h2 class="text-lg font-bold">Volenteer with us</h2>
+                            <p class="text-sm max-w-[60%] text-center">Get your info tests delivered at home collect a sample from the your task.</p>
+                            <button class="flex items-center justify-center space-x-2 text-sm text-blue-600 md:hover:text-blue-500"><span>Learn more</span><ion-icon name="chevron-forward"></ion-icon></button>
+                        </div>
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                            <img src="./assets/Group-4.svg" alt="">
+                            <h2 class="text-lg font-bold">Partner with us</h2>
+                            <p class="text-sm max-w-[60%] text-center">Get your info tests delivered at home collect a sample from the your task.</p>
+                            <button class="flex items-center justify-center space-x-2 text-sm text-blue-600 md:hover:text-blue-500"><span>Learn more</span><ion-icon name="chevron-forward"></ion-icon></button>
+                        </div>
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                            <img src="./assets/Group-5.svg" alt="">
+                            <h2 class="text-lg font-bold">Help us for educational</h2>
+                            <p class="text-sm max-w-[60%] text-center">Get your info tests delivered at home collect a sample from the your task.</p>
+                            <button class="flex items-center justify-center space-x-2 text-sm text-blue-600 md:hover:text-blue-500"><span>Learn more</span><ion-icon name="chevron-forward"></ion-icon></button>
+                        </div>
+                        <div class="absolute -top-5 bg-[#F9FAFC] p-2 h-10 w-10 flex items-center justify-center -rotate-45 rounded-full">
+                            <ion-icon name="arrow-down" class="rotate-45"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="grid items-center grid-cols-1 gap-6 py-10 sm:grid-cols-2 md:grid-cols-4 justify-items-center">
+                          <div class="text-center">
+                             <h2 class="text-xl font-bold">254</h2>
+                             <p class="">Successful Projects</p>
+                          </div>
+                          <div class="text-center">
+                            <h2 class="text-xl font-bold">3783</h2>
+                            <p>People Impacted</p>
+                          </div>
+                          <div class="text-center">
+                            <h2 class="text-xl font-bold">8M+</h2>
+                            <p>Money Donated</p>
+                          </div>
+                          <div class="text-center">
+                            <h2 class="text-xl font-bold">60+</h2>
+                            <p>Volunteer Involved</p>
+                          </div>
+                    </div>
+             </div>
+         </section>
+         <section class="bg-[#F9FAFC]">
+             <div class="max-w-[1440px] text-center md:text-left gap-6 md:gap-0 mx-auto py-4  px-4 grid grid-cols-1 md:grid-cols-2 justify-items-center items-center">
+                    <img src="./assets/video.png" class="drop-shadow-md">
+                    <div class="space-y-8 md:space-y-4">
+                        <h2 class="text-2xl font-bold md:max-w-[60%]">We've funded $23,135  food projects for 5.3M people around the worldwide.</h2>
+                        <p class="md:max-w-[60%]">Get your tests delivered at let home collect sample from the victory of the managments that
+                            supplies best design system guidelines ever.
+                        </p>
+                        <div class="grid items-center grid-cols-1 gap-4 font-bold md:grid-cols-2">
+                            <div class="flex items-center space-x-2 ">
+                                <ion-icon name="checkmark" class="rounded-full p-1 bg-[#A29BFE] w-3 h-3 sm:w-4 sm:h-4"></ion-icon>
+                                <p>Medical and vision</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <ion-icon name="checkmark" class="rounded-full p-1 bg-[#A29BFE] w-3 h-3 sm:w-4 sm:h-4"></ion-icon>
+                                <p>HSAs and FSAs</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <ion-icon name="checkmark" class="rounded-full p-1 bg-[#A29BFE] w-3 h-3 sm:w-4 sm:h-4"></ion-icon>
+                                <p>Life insurance</p>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <ion-icon name="checkmark" class="rounded-full p-1 bg-[#A29BFE] w-3 h-3 sm:w-4 sm:h-4"></ion-icon>
+                                <p>Commuter benefits</p>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+         </section>
+         <section>
+            <div class="max-w-[1440px] text-center flex flex-col space-y-6 items-center px-4 py-6">
+                     <div class="py-6">
+                        <h3 class="text-[#A29BFE] text-center">Those states we provide donation</h3>
+                        <h2 class="text-lg text-center">We are organizing a program on January 20, 2019 to help the homeless people.</h2>
+                        <h2 class="text-lg text-center">Our aim is to provide them a specific place to live.</h2>
+                     </div>
+                     <img src="./assets/map.svg">
+            </div>
+         </section>
+         <footer class="bg-[#353448]">
+             <div class="max-w-[1440px] mx-auto px-4 md:px-20 text-white pt-12 pb-6">
+                   <div class="flex flex-col items-center justify-center space-y-6">
+                     <div class="space-x-2 text-center">
+                           <h2 class="text-lg font-bold md:text-2xl">Subscribe to get notified about update</h2>
+                           <p class="text-sm md:text-base">By subscribing with your mail, you will accept our privacy policy</p>
+                     </div>
+                     <form class="grid grid-cols-1 gap-4 sm:grid-cols-2 w-full md:w-[55%]">
+                        <input type="text" placeholder="Enter your email" class="flex-grow p-2  rounded-md outline-none bg-[#4e4d68]" />
+                        <button type="button" class="bg-[#A29BFE] md:hover:bg-[#aba5ff] px-4 py-2 rounded-md">Subscribe</button>
+                     </form>
+                   </div>
+                    <div class="flex flex-col items-center justify-between pt-8 space-y-6 text-white md:space-y-0 md:flex-row">
+                        <div class="flex items-center order-2 pt-6 space-x-2 md:order-1 md:pt-0">
+                            <h1 class="text-2xl font-bold uppercase">hopeful</h1>
+                            <p>Copyright @ 2023</p>
+                        </div>
+                        <div class="flex flex-col items-center order-1 md:space-x-4 md:flex-row md:order-2">
+                            <p class="cursor-pointer">Home</p>
+                            <p class="cursor-pointer">Advertise</p>
+                            <p class="cursor-pointer">Supports</p>
+                            <p class="cursor-pointer">Marketing</p>
+                            <p>FAQ</p>
+                        </div>
+                    </div>
+                   </div>
+                   
+             </div>
+         </footer>
+</body>
+
+<script>
+    const openButton=document.getElementById('open-btn');
+    const closeButton=document.getElementById('close-btn');
+    const toggleMenu=document.getElementById('toggle-menu');
+
+    openButton.addEventListener('click',()=>{
+        toggleMenu.classList.add("translate-x-[0%]");
+        toggleMenu.classList.remove("-translate-x-[100%]");
+    });
+
+    closeButton.addEventListener('click',()=>{
+        toggleMenu.classList.remove("translate-x-[0%]");
+        toggleMenu.classList.add("-translate-x-[100%]");
+    });
+
+console.log("hello world");
+</script>
+</html>
+
+<!-- stroke #A29BFE -->
+<!-- fill #F5F4FF -->
+<!-- gray #F9FAFC -->
+ <!-- black #353448 -->
